@@ -25,9 +25,6 @@ nav {
 .button01 {
 	grid-column: 1;
 	grid-row: 1;
-}
-
-.button01 p {
 	text-decoration: none;
 	text-align: center;
 	color: #4C6085;
@@ -35,15 +32,34 @@ nav {
 	font-weight: 500;
 }
 
-.button02 {
+.button02  {
 	grid-column: 2;
 	grid-row: 1;
-}
-
-.button02 p {
 	text-decoration: none;
 	text-align: center;
 	color: #4C6085;
 	font-size: 1.3rem;
 	font-weight: 500;
 }
+
+@media screen and (max-width: 50em){
+
+	header {
+		display: grid;
+		grid-template-columns: 1fr;
+		padding-left: 1rem;
+		padding-right: 1rem;
+
+	}
+
+	.title {
+		grid-column: 1;
+		font-size: 1rem;
+		text-align: left;
+	}
+
+	nav {
+		visibility: hidden;
+	}
+
+	}

@@ -13,7 +13,8 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9c2a7f405f.js" crossorigin="anonymous"></script>
+
 
   <link rel="stylesheet" type="text/css" href="https://sf.abarba.me/font.css">
 
@@ -30,10 +31,10 @@
     </div>
     <nav>
       <div class="button01">
-        <a href="#ABOUT"><p>ABOUT</p></a>
+        <a href="#about">ABOUT</a>
       </div>
       <div class="button02">
-        <a href="#FAQ"><p>FAQ</p></a>
+        <a href="#FAQ">FAQ</a>
       </div>
     </nav>
   </header>
@@ -43,16 +44,15 @@
       <h2>Set your goals.</h2>
       <h2>Track your progress.</h2>
       <h2>Train like a <span>PRO.</span></h2>
-    </div>
-    <div class="button">
       <a href="https://www.apple.com/ios/app-store/"><p>GET THE APP</p></a>
-  </div>
+    </div>
 
   <div class="image01">
     <img src="img/hero-image.png">
   </div>
   </section>
 
+  <a id="about"></a>
   <section class="ABOUT">
 
     <section class="goals">
@@ -106,14 +106,30 @@
 
 </section>
 
-  <section class="FAQ">
-    <h1>Is MACRO TRACK PRO available for Android?</h1>
-    <p>Not yet, but we are surely working hard to bring MACRO TRACK PRO to Google Play as soon as possible!</p>
+<a id="FAQ"></a>
 
-    <h1>Will I be able to edit my overall weight goal if I no longer want to be eating in a deficit?</h1>
-    <p>Yes! You can always change your weight goals by visiting your profile page.</p>
+  <div class="faq">
+    <div class="actual_faq">
+    <button class="accordion">Is MACRO TRACK PRO available for Android?</button>
+      <div class="panel">
+        <p>Not yet, but we are surely working hard to bring MACRO TRACK PRO to Google Play as soon as possible!</p>
+      </div>
 
-  </section>
+      <button class="accordion">Will I be able to edit my overall weight goal if I no longer want to be eating in a deficit?</button>
+      <div class="panel">
+        <p>Yes! You can always change your weight goals by visiting your profile page.</p>
+      </div>
+
+      <button class="accordion">Can I edit the custom meals that I create?</button>
+      <div class="panel">
+        <p>Yes you can edit the specifics of your custom meals to fit the amount you consumed.</p>
+      </div>
+
+      <button class="accordion">Am I able to view my meals from the previous day?</button>
+      <div class="panel">
+        <p>The calendar will allow you to go back to a day in the past to view what you logged.</p>
+      </div>
+    </div>
 
 </main>
 
@@ -127,7 +143,7 @@
     <form>
       <label for="email">E-mail Adress*</label>
       <input id="email" type="text" name="textfield">
-      <button>Subscribe</button>
+      <button><a href="#Subscribe">Subscribe</a></button>
     </form>
   </div>
 
@@ -140,15 +156,32 @@
     <h2>Follow Us</h2>
 
     <div class="insta">
-      <i class="fab fa-instagram"></i>
-      <i class="fab fa-facebook-square"></i>
-      <i class="fab fa-twitter-square"></i>
+      <ul>
+      <li><a href="www.instagram.com"><i class="fab fa-instagram"></a></i></li>
+      <li><a href="www.facebook.com"><i class="fab fa-facebook-square"></a></i></li>
+      <li><a href="www.twitter.com"><i class="fab fa-twitter-square"></i></a></li>
     </div>
   </div>
 
 </footer>
 
   <!-- Add your site content here -->
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
 
 
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>

@@ -32,4 +32,65 @@ footer {
 .apps {
 	grid-column: 4;
 	grid-row: 1;
+
 }
+
+ul {
+	list-style: none;
+}
+
+li {
+	display: inline-block;
+	font-size: 2rem;
+	color: #E7EBEC;
+}
+
+a:visited {
+	color: #4C6085;
+}
+
+footer a {
+	color: #E7EBEC;
+	padding: .5rem;
+}
+
+.subscription a{
+	color: #4C6085;
+}
+
+@media screen and (max-width: 50em){
+	footer {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		height: 50vh;
+		font-weight: 300;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		text-align: center;
+	}
+
+.text05 {
+	grid-column: 1;
+	grid-row: 1;
+	font-weight: 400;
+	font-size: .6rem;
+}
+
+.subscription {
+	grid-column: 1;
+	grid-row: 2;
+}
+
+.text06 {
+	grid-column: 1;
+	grid-row: 4;
+	font-size: .7rem;
+}
+
+.apps {
+	grid-column: 1;
+	grid-row: 3;
+
+}
+	}
